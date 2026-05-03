@@ -4,22 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Note Mate Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for Note Mate, a note-taking, memory, reminder, AI assistant, backup, and collaboration app.">
+  <meta name="description" content="Privacy Policy for Note Mate, an Android notes, memory, reminders, AI, backup, collaboration, and productivity app.">
   <style>
     :root {
       color-scheme: light;
-      --ink: #172033;
-      --muted: #5f6d84;
-      --paper: #fffaf0;
-      --card: #ffffff;
-      --line: #e7dfd0;
-      --brand: #6b3df4;
-      --brand-dark: #4320b8;
-      --accent: #f6b84b;
-      --good: #0f7b5c;
-      --warning: #a95c00;
-      --shadow: 0 24px 70px rgba(39, 28, 77, 0.12);
-      --radius: 24px;
+      --page: #f7f8fb;
+      --paper: #ffffff;
+      --ink: #182032;
+      --muted: #5d687a;
+      --soft: #eef2f7;
+      --line: #dbe2ea;
+      --brand: #27645b;
+      --brand-strong: #123f39;
+      --blue: #335c9e;
+      --amber: #8b5e1c;
+      --rose: #9b3f56;
+      --shadow: 0 18px 55px rgba(25, 32, 48, 0.10);
+      --radius: 18px;
       font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     }
 
@@ -27,17 +28,21 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background:
-        radial-gradient(circle at top left, rgba(107, 61, 244, 0.16), transparent 34rem),
-        linear-gradient(135deg, #fffaf0 0%, #f8f4ff 46%, #eef7ff 100%);
+        linear-gradient(180deg, #ffffff 0%, var(--page) 42%, #f3f5f8 100%);
       color: var(--ink);
-      line-height: 1.65;
+      line-height: 1.68;
+      text-rendering: optimizeLegibility;
     }
 
     a {
-      color: var(--brand-dark);
+      color: var(--brand-strong);
       font-weight: 700;
       text-decoration-thickness: 0.12em;
       text-underline-offset: 0.18em;
@@ -49,138 +54,127 @@
     }
 
     header {
-      padding: 56px 0 28px;
+      padding: 42px 0 18px;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(107, 61, 244, 0.16);
-      border-radius: 36px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: clamp(22px, 4vw, 48px);
+      align-items: end;
+      border: 1px solid var(--line);
+      border-radius: 28px;
       background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 240, 0.9)),
-        radial-gradient(circle at 88% 16%, rgba(246, 184, 75, 0.35), transparent 18rem);
+        linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(247, 248, 251, 0.96)),
+        linear-gradient(90deg, rgba(39, 100, 91, 0.10), rgba(51, 92, 158, 0.08));
       box-shadow: var(--shadow);
-      padding: clamp(28px, 5vw, 64px);
-    }
-
-    .hero:after {
-      content: "";
-      position: absolute;
-      right: -60px;
-      bottom: -90px;
-      width: 260px;
-      height: 260px;
-      border-radius: 48px;
-      transform: rotate(-12deg);
-      background: linear-gradient(160deg, rgba(107, 61, 244, 0.18), rgba(246, 184, 75, 0.28));
-      pointer-events: none;
+      padding: clamp(28px, 5vw, 58px);
     }
 
     .eyebrow {
       display: inline-flex;
-      gap: 8px;
       align-items: center;
-      padding: 8px 12px;
+      gap: 8px;
+      border: 1px solid rgba(39, 100, 91, 0.22);
       border-radius: 999px;
-      background: rgba(107, 61, 244, 0.09);
-      color: var(--brand-dark);
-      font-size: 0.88rem;
+      background: rgba(39, 100, 91, 0.08);
+      color: var(--brand-strong);
+      padding: 7px 12px;
+      font-size: 0.8rem;
       font-weight: 800;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     h1 {
-      margin: 22px 0 12px;
       max-width: 820px;
-      font-size: clamp(2.45rem, 6vw, 5rem);
-      line-height: 0.96;
-      letter-spacing: -0.06em;
+      margin: 20px 0 14px;
+      font-size: clamp(2.35rem, 6vw, 4.75rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
     }
 
     .lede {
       max-width: 820px;
       margin: 0;
       color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      font-size: clamp(1.04rem, 1.8vw, 1.24rem);
     }
 
-    .meta-grid {
-      position: relative;
-      z-index: 1;
+    .facts {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 32px;
+      gap: 12px;
     }
 
-    .meta {
+    .fact {
       border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.76);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
       padding: 16px;
     }
 
-    .meta strong {
+    .fact strong {
       display: block;
-      font-size: 0.82rem;
+      margin-bottom: 4px;
       color: var(--muted);
-      text-transform: uppercase;
+      font-size: 0.76rem;
       letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 5;
-      border-bottom: 1px solid rgba(231, 223, 208, 0.8);
-      background: rgba(255, 250, 240, 0.86);
-      backdrop-filter: blur(16px);
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 248, 251, 0.9);
+      backdrop-filter: blur(14px);
     }
 
     .nav-inner {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding: 12px 0;
+      padding: 11px 0;
       scrollbar-width: thin;
     }
 
     .nav-inner a {
       flex: 0 0 auto;
-      border: 1px solid rgba(107, 61, 244, 0.16);
+      border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.74);
-      padding: 8px 13px;
+      background: #ffffff;
       color: var(--ink);
       font-size: 0.9rem;
+      line-height: 1;
+      padding: 10px 13px;
       text-decoration: none;
     }
 
     main {
-      padding: 30px 0 72px;
+      padding: 28px 0 72px;
     }
 
     section {
-      margin: 22px 0;
+      margin: 18px 0;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.86);
-      box-shadow: 0 18px 44px rgba(45, 36, 78, 0.07);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 30px rgba(25, 32, 48, 0.06);
       padding: clamp(22px, 4vw, 42px);
     }
 
     h2 {
       margin: 0 0 14px;
-      font-size: clamp(1.55rem, 3vw, 2.35rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
 
     h3 {
       margin: 28px 0 10px;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
+      line-height: 1.24;
     }
 
     p {
@@ -189,92 +183,180 @@
 
     ul {
       margin: 0 0 18px;
-      padding-left: 1.25rem;
+      padding-left: 1.22rem;
     }
 
     li {
       margin: 8px 0;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      overflow: hidden;
-      border-radius: 18px;
-      background: var(--card);
-      font-size: 0.96rem;
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0 4px;
     }
 
-    th, td {
-      vertical-align: top;
+    .summary-card {
       border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+      padding: 16px;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      margin: 18px 0 22px;
+      font-size: 0.95rem;
+    }
+
+    th,
+    td {
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
       padding: 14px;
       text-align: left;
     }
 
+    th + th,
+    td + td {
+      border-left: 1px solid var(--line);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
     th {
-      background: #f4efff;
-      color: #321783;
+      background: #edf3f1;
+      color: var(--brand-strong);
+      font-size: 0.84rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
 
     .callout {
-      margin: 22px 0;
+      margin: 20px 0;
+      border: 1px solid rgba(39, 100, 91, 0.22);
       border-left: 5px solid var(--brand);
-      border-radius: 18px;
-      background: #f6f2ff;
+      border-radius: var(--radius);
+      background: #f1f7f5;
       padding: 16px 18px;
     }
 
     .callout.warning {
-      border-left-color: var(--warning);
-      background: #fff4df;
+      border-color: rgba(139, 94, 28, 0.24);
+      border-left-color: var(--amber);
+      background: #fff8ec;
     }
 
-    .callout.good {
-      border-left-color: var(--good);
-      background: #effaf5;
+    .callout.rose {
+      border-color: rgba(155, 63, 86, 0.22);
+      border-left-color: var(--rose);
+      background: #fff2f5;
     }
 
     .small {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
     }
 
     footer {
       border-top: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.7);
-      padding: 28px 0 44px;
+      background: #ffffff;
       color: var(--muted);
+      padding: 28px 0 44px;
     }
 
-    @media (max-width: 760px) {
-      .meta-grid {
+    @media (max-width: 820px) {
+      .hero {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        border-radius: 24px;
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 24px, 1120px);
       }
 
-      th, td {
+      header {
+        padding-top: 22px;
+      }
+
+      .hero,
+      section {
+        border-radius: 18px;
+      }
+
+      table,
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
         display: block;
         width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        border: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      td + td {
+        border-left: 0;
+      }
+
+      td:last-child {
+        border-bottom: 0;
       }
     }
 
     @media print {
-      nav,
-      .hero:after {
+      nav {
         display: none;
       }
 
       body {
-        background: #fff;
+        background: #ffffff;
       }
 
-      section,
-      .hero {
+      .hero,
+      section {
         box-shadow: none;
         break-inside: avoid;
       }
@@ -284,32 +366,34 @@
 <body>
   <header class="shell">
     <div class="hero">
-      <span class="eyebrow">Note Mate Privacy Policy</span>
-      <h1>Your notes are personal. This policy explains how Note Mate handles them.</h1>
-      <p class="lede">
-        This Privacy Policy describes how Note Mate collects, uses, stores, protects, shares, and deletes information when you use the Note Mate mobile application, widgets, cloud features, AI assistant, backup tools, collaboration features, exports, reminders, and related services.
-      </p>
-      <div class="meta-grid" aria-label="Policy details">
-        <div class="meta"><strong>Effective date</strong> May 3, 2026</div>
-        <div class="meta"><strong>Controller / operator</strong> Note Mate / Shreyas Links</div>
-        <div class="meta"><strong>Contact</strong> <a href="mailto:shreyaslinks00008@gmail.com">shreyaslinks00008@gmail.com</a></div>
+      <div>
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>How Note Mate handles your notes, files, AI requests, backups, and account data.</h1>
+        <p class="lede">
+          This policy explains what information Note Mate may access, collect, use, store, share, retain, protect, and delete when you use the Android app, widgets, reminders, Mate AI, backup, restore, collaboration, import/export, screenshot, notification, and account features.
+        </p>
+      </div>
+      <div class="facts" aria-label="Policy facts">
+        <div class="fact"><strong>Effective date</strong> May 3, 2026</div>
+        <div class="fact"><strong>App and operator</strong> Note Mate / Shreyas Links</div>
+        <div class="fact"><strong>Privacy contact</strong> <a href="mailto:shreyaslinks00008@gmail.com">shreyaslinks00008@gmail.com</a></div>
       </div>
     </div>
   </header>
 
   <nav>
-    <div class="shell nav-inner" aria-label="Privacy Policy navigation">
+    <div class="shell nav-inner" aria-label="Policy navigation">
       <a href="#summary">Summary</a>
       <a href="#scope">Scope</a>
-      <a href="#data">Data We Process</a>
-      <a href="#use">How We Use Data</a>
-      <a href="#ai">Mate AI</a>
-      <a href="#backup">Backup and Restore</a>
+      <a href="#data">Data</a>
+      <a href="#purposes">Use</a>
+      <a href="#ai">AI</a>
+      <a href="#backup">Backup</a>
       <a href="#permissions">Permissions</a>
       <a href="#sharing">Sharing</a>
-      <a href="#rights">Your Rights</a>
       <a href="#security">Security</a>
       <a href="#retention">Retention</a>
+      <a href="#rights">Rights</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -318,131 +402,135 @@
     <section id="summary">
       <h2>1. Plain-language summary</h2>
       <p>
-        Note Mate is designed for private note-taking, memories, reminders, study workflows, sticky note widgets, AI writing help, exports, optional collaboration, and optional backup. Most day-to-day note editing happens locally on your device. Cloud services are used only for features that require them, such as sign-in, sync, collaboration, AI requests, push notifications, analytics, ads, remote configuration, and Google Drive backup.
+        Note Mate is a productivity app for private notes, rich text, tasks, sticky notes, memories, study workflows, PDFs, reminders, widgets, optional AI help, optional collaboration, and optional cloud backup. Many core features work locally on your device. Online features use service providers only when needed for that feature.
       </p>
-      <div class="callout good">
-        <p><strong>Important privacy commitments:</strong> we do not sell your note content; we do not intentionally publish your private notes; we request Android permissions only for app features that need them; and cloud backup content is intended to be encrypted before upload where the encrypted backup flow is used.</p>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <strong>Your notes are not sold.</strong>
+          <p>We do not sell private note content. We do not intentionally publish private notes.</p>
+        </div>
+        <div class="summary-card">
+          <strong>Cloud features are optional.</strong>
+          <p>Sign-in, backup, restore, collaboration, AI, ads, analytics, and notifications may involve third-party services.</p>
+        </div>
+        <div class="summary-card">
+          <strong>You control many choices.</strong>
+          <p>You can deny Android permissions, avoid optional features, delete notes, export files, remove collaborators, and contact us for account requests.</p>
+        </div>
       </div>
-      <p>
-        Some information must still be processed by trusted service providers so the app can function. For example, Firebase may process account identifiers, device tokens, analytics events, crash or diagnostic data, remote configuration, cloud functions, and collaboration metadata. AI providers may process the note text or prompt you choose to send for an AI task. Google Drive processes backup files if you use Drive backup. Google AdMob may process advertising and device information if ads are enabled in your region and app build.
-      </p>
+      <div class="callout">
+        <p><strong>Important:</strong> if you use Mate AI, collaboration, Google Drive backup, sharing, or exports, the information you choose to send or share can leave your device and may be processed by service providers or recipients under their own terms.</p>
+      </div>
     </section>
 
     <section id="scope">
-      <h2>2. Scope and who this policy applies to</h2>
+      <h2>2. Scope and relationship to other services</h2>
       <p>
-        This policy applies to users of Note Mate on Android, including users in the United States, the European Economic Area, the United Kingdom, India, and other regions. It applies when you use the app, create notes or memories, enable cloud features, use Mate AI, import or export files, use widgets, create reminders, collaborate with another user, contact support, or interact with notifications.
+        This policy applies to Note Mate for Android and related services operated for the app. It applies when you install or use the app, create or import content, sign in, use Mate AI, use cloud backup, share or collaborate on notes, enable reminders, use widgets, contact support, receive notifications, or interact with ads or analytics.
       </p>
       <p>
-        This policy does not replace privacy notices from third-party services that you independently use, such as Google Play, Google Drive, Firebase, Google AdMob, AI providers, your device manufacturer, your keyboard app, your launcher, WhatsApp or other sharing targets, or cloud storage providers. Those services may process information under their own privacy policies when you interact with them.
+        This policy does not replace the privacy policies of third parties you independently use, such as Google Play, Google Drive, Firebase, Google AdMob, Groq, OpenRouter, your Android device manufacturer, your keyboard, your cloud storage provider, messaging apps, file managers, browser apps, or recipients you share content with.
       </p>
     </section>
 
     <section id="data">
-      <h2>3. Categories of information we process</h2>
+      <h2>3. Categories of information Note Mate may process</h2>
       <p>
-        The exact information processed depends on the features you use and the permissions you grant. You can use many local features without enabling every permission.
+        The exact data depends on the features you use, the settings you choose, the permissions you grant, your region, and the app build or configuration.
       </p>
       <table>
         <thead>
           <tr>
             <th>Category</th>
             <th>Examples</th>
-            <th>Typical source</th>
-            <th>Why it is processed</th>
+            <th>Source</th>
+            <th>Typical purpose</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Account and profile information</td>
-            <td>Email address, Firebase user ID, display name, profile photo URL, sign-in provider, deletion request status.</td>
+            <td>Account and profile data</td>
+            <td>Email address, display name, profile photo URL, Firebase user ID, Google Sign-In identifiers, provider details, account deletion status.</td>
             <td>You, Firebase Authentication, Google Sign-In.</td>
-            <td>Account access, collaboration, backup identity, support, abuse prevention, and account deletion workflows.</td>
+            <td>Sign-in, account recovery, backup identity, collaboration, abuse prevention, deletion workflows, and support.</td>
           </tr>
           <tr>
-            <td>Note and productivity content</td>
-            <td>Note titles, text, rich text formatting, tags, folders, images, audio, drawings, PDFs, tasks, checklists, study content, reminders, links, imported files, exported files, and document metadata.</td>
-            <td>You create, import, capture, record, scan, or attach it.</td>
-            <td>Provide note editing, search, organization, widgets, backup, export, restore, collaboration, and AI assistance when requested.</td>
+            <td>Notes and productivity content</td>
+            <td>Note titles, body text, rich text formatting, folders, tags, collections, tasks, checklists, sticky notes, study cards, templates, links, drawings, handwritten strokes, PDFs, attachments, and metadata.</td>
+            <td>You create, import, capture, scan, attach, or edit it.</td>
+            <td>Provide note editing, organization, search, reminders, export, restore, backup, collaboration, and optional AI assistance.</td>
           </tr>
           <tr>
-            <td>Memories and screenshot capture content</td>
-            <td>Images, screenshots, memory descriptions, source app name, source URL, generated tags, audio signs, timestamps, and resurfacing settings.</td>
-            <td>You add it or enable screenshot-related workflows.</td>
-            <td>Save memories, organize captures, resurface items, and support optional AI analysis or tagging.</td>
+            <td>Media, voice, OCR, and memory data</td>
+            <td>Images, screenshots, audio recordings, voice notes, image labels, OCR text, digital ink recognition results, memory descriptions, timestamps, app names, URLs, and file metadata.</td>
+            <td>You add media, grant media/microphone permissions, or enable capture features.</td>
+            <td>Attach media, create memories, make content searchable, transcribe or label items, resurface memories, and support exports or backup.</td>
           </tr>
           <tr>
-            <td>Reminder, location, and calendar information</td>
-            <td>Reminder date/time, repeat settings, alarm status, location name, latitude/longitude for location reminders, calendar event title, time, location, attendees if available from your calendar provider.</td>
-            <td>You configure reminders or grant calendar/location access.</td>
-            <td>Schedule reminders, show notifications, create meeting notes, and trigger location-based reminders.</td>
-          </tr>
-          <tr>
-            <td>Media and microphone data</td>
-            <td>Images, videos, audio recordings, voice note files, OCR text extracted from images, labels generated from images, and file metadata.</td>
-            <td>Your device media picker, camera/gallery, microphone, OCR and ML features.</td>
-            <td>Attach media to notes, create voice notes, generate searchable text, export documents, and back up selected content.</td>
+            <td>Reminder, calendar, and location data</td>
+            <td>Reminder title, date/time, repeat rules, notification state, alarm settings, calendar event details, location name, approximate or precise location, latitude/longitude for location reminders.</td>
+            <td>You, Android permissions, Google Play services location, calendar providers.</td>
+            <td>Schedule reminders, create meeting notes, show notifications, trigger location reminders, and restore alarms after reboot.</td>
           </tr>
           <tr>
             <td>AI request data</td>
-            <td>Your prompt, selected command, selected model, current note content you provide to Mate AI, generated output, and technical request metadata.</td>
+            <td>Prompts, selected command, selected model, note text or context you submit, generated output, model settings, request status, errors, and technical request metadata.</td>
             <td>You initiate Mate AI actions.</td>
-            <td>Generate summaries, rewrites, grammar fixes, continuations, study help, tags, and note structure suggestions.</td>
+            <td>Generate summaries, rewrites, grammar help, continuations, tags, explanations, study material, and note organization suggestions.</td>
           </tr>
           <tr>
-            <td>Cloud backup and restore data</td>
-            <td>Encrypted backup bundles, encrypted media files, backup metadata, Google Drive file IDs, timestamps, backup frequency, backup status, and restore logs.</td>
+            <td>Backup, restore, and cloud file data</td>
+            <td>Backup bundles, encrypted or packaged note data, media files, Google Drive file IDs, backup timestamps, restore logs, version metadata, and backup preferences.</td>
             <td>Backup and restore features.</td>
-            <td>Backup, restore, migration to a new device, and reliability troubleshooting.</td>
+            <td>Back up, restore, migrate, troubleshoot, and protect app data across devices.</td>
           </tr>
           <tr>
-            <td>Collaboration information</td>
-            <td>Shared note ID, owner ID, collaborator user IDs, collaborator email lookups, roles such as viewer/editor, updated-by fields, version or patch history, invitation status, and conflict metadata.</td>
-            <td>You and collaborators.</td>
-            <td>Allow registered users to share notes with access controls and basic conflict handling.</td>
+            <td>Collaboration data</td>
+            <td>Shared note IDs, owner IDs, collaborator IDs, collaborator emails, roles, invitations, patch/version history, updated-by fields, timestamps, conflict metadata, and shared content where applicable.</td>
+            <td>You, collaborators, Firebase services.</td>
+            <td>Share notes, enforce access controls, sync edits, resolve conflicts, and show collaboration state.</td>
           </tr>
           <tr>
-            <td>Device, app, security, and diagnostics data</td>
-            <td>App version, build type, device model, Android version, network status, Firebase installation ID, push token, app integrity or App Check signals, root/emulator/debug/tamper signals, crash and performance information, logs, feature flags, and remote configuration values.</td>
-            <td>Your device, Firebase, Google Play services, app runtime.</td>
-            <td>Keep the app secure, diagnose failures, prevent abuse, enforce feature flags, improve stability, and protect cloud features.</td>
+            <td>Device, app, diagnostics, and security data</td>
+            <td>App version, package name, Android version, device model, network state, Firebase installation ID, push token, crash data, performance data, logs, App Check or Play Integrity signals, tamper/root/debug/emulator indicators, remote config values.</td>
+            <td>Your device, app runtime, Firebase, Google Play services.</td>
+            <td>Operate the app, send notifications, improve reliability, prevent abuse, protect cloud features, diagnose crashes, and respond to incidents.</td>
           </tr>
           <tr>
-            <td>Advertising and analytics data</td>
-            <td>Ad interactions, approximate device and app information, consent status where applicable, analytics events such as feature usage, and identifiers handled by advertising or analytics SDKs.</td>
-            <td>Google AdMob, Firebase Analytics, app events.</td>
-            <td>Measure app usage, improve features, support free features, show ads where enabled, and comply with consent requirements.</td>
+            <td>Ads, analytics, and campaign data</td>
+            <td>Feature usage events, ad impressions, ad clicks, approximate device/app information, consent status, campaign tile interactions, and identifiers handled by analytics or advertising SDKs.</td>
+            <td>App events, Firebase Analytics, Google AdMob, device settings.</td>
+            <td>Measure usage, support free features, improve design, show ads where enabled, and comply with consent requirements.</td>
           </tr>
           <tr>
             <td>Support communications</td>
-            <td>Email address, messages, screenshots, logs, diagnostics, bug reports, and information you choose to share with support.</td>
+            <td>Your email address, messages, screenshots, logs, diagnostics, app version, device information, and other information you choose to provide.</td>
             <td>You contact us.</td>
-            <td>Respond to requests, investigate problems, verify account ownership, and improve the app.</td>
+            <td>Respond to requests, troubleshoot, verify ownership, investigate privacy or security concerns, and improve the app.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <section id="use">
+    <section id="purposes">
       <h2>4. How we use information</h2>
-      <p>We process information for the following purposes:</p>
       <ul>
-        <li>To provide core note-taking, rich text editing, memories, PDFs, documents, study tools, search, tags, folders, task lists, widgets, and recycle bin functionality.</li>
-        <li>To authenticate users, maintain account security, and allow optional sign-in, backup, restore, and collaboration features.</li>
-        <li>To save, sync, encrypt where supported, upload, download, restore, and delete cloud backup data and related metadata.</li>
-        <li>To power Mate AI only when you request AI assistance, such as summarizing, rewriting, correcting, continuing, tagging, structuring, or explaining content.</li>
-        <li>To schedule local and location-based reminders, notifications, meeting reminders, daily recall, and memory resurfacing.</li>
-        <li>To enable imports and exports, including PDF, TXT, DOCX, image, audio, and Note Mate `.links` files.</li>
-        <li>To detect abuse, protect AI and backup systems, verify app integrity, rate-limit expensive operations, and reduce fraud, spam, or tampering.</li>
-        <li>To improve performance, reliability, accessibility, UI quality, and feature design using aggregated or diagnostic information where available.</li>
-        <li>To comply with applicable law, respond to lawful requests, enforce terms, and protect users, the public, and our rights.</li>
+        <li>To provide core note-taking, rich text editing, sticky notes, tasks, memories, PDFs, study tools, search, folders, widgets, recycle bin, import, and export features.</li>
+        <li>To authenticate accounts, maintain account security, support sign-in, and connect signed-in features such as backup, restore, and collaboration.</li>
+        <li>To process AI requests you initiate, return generated output, manage model availability, enforce rate limits, and reduce abuse.</li>
+        <li>To back up, encrypt where supported, upload, list, download, restore, merge, and delete backup data and metadata.</li>
+        <li>To schedule reminders, alarms, meeting notes, daily recall, memory resurfacing, and notification delivery.</li>
+        <li>To provide collaboration, invitations, access control, shared editing, and conflict handling.</li>
+        <li>To detect abuse, verify app integrity, protect cloud resources, enforce security controls, and prevent fraud or tampering.</li>
+        <li>To measure app usage, improve accessibility, polish user experience, diagnose crashes, tune remote configuration, and maintain stability.</li>
+        <li>To comply with law, respond to lawful requests, enforce rights, protect users, and handle account deletion or privacy requests.</li>
       </ul>
     </section>
 
-    <section id="legal-bases">
-      <h2>5. Legal bases for processing</h2>
+    <section id="legal">
+      <h2>5. Legal bases and lawful purposes</h2>
       <p>
-        Where laws such as the EU General Data Protection Regulation or UK GDPR apply, we rely on one or more of the following legal bases:
+        Where the EU GDPR, UK GDPR, or similar laws apply, we rely on one or more legal bases depending on the feature and context.
       </p>
       <table>
         <thead>
@@ -454,94 +542,82 @@
         <tbody>
           <tr>
             <td>Performance of a contract</td>
-            <td>Creating and editing notes, opening files, restoring backups, using signed-in features, syncing collaboration data, and providing requested app functionality.</td>
+            <td>Creating notes, storing local content, opening files, restoring backups, signing in, syncing collaboration, and providing requested app features.</td>
           </tr>
           <tr>
             <td>Consent</td>
-            <td>Optional permissions such as microphone, media, notifications, precise location, background location, calendar access, personalized advertising where required, and optional AI requests involving note content.</td>
+            <td>Optional Android permissions, personalized ads where required, microphone, media, notifications, precise location, background location, calendar access, Google Drive connection, and AI requests that include content you choose to submit.</td>
           </tr>
           <tr>
             <td>Legitimate interests</td>
-            <td>Security checks, abuse prevention, crash diagnostics, feature reliability, fraud prevention, app improvement, and protecting cloud resources.</td>
+            <td>Security, abuse prevention, reliability, crash diagnostics, app improvement, fraud prevention, and protecting cloud infrastructure.</td>
           </tr>
           <tr>
             <td>Legal obligation</td>
-            <td>Responding to valid legal requests, tax or accounting obligations where applicable, consumer rights requests, and record-keeping required by law.</td>
+            <td>Responding to valid legal requests, keeping records required by law, and handling rights requests.</td>
           </tr>
           <tr>
             <td>Vital interests or public interest</td>
-            <td>Rare cases where processing is necessary to protect safety, prevent serious harm, or comply with emergency legal requests.</td>
+            <td>Rare circumstances where processing is necessary to protect safety, prevent serious harm, or comply with emergency legal obligations.</td>
           </tr>
         </tbody>
       </table>
       <p>
-        Under India's Digital Personal Data Protection framework, we process personal data for lawful purposes with notice and consent where required, and for legitimate uses permitted by applicable law. Under U.S. state privacy laws, including California privacy laws where applicable, we provide disclosures about categories of information, purposes, sharing, retention, and rights.
+        For India, we process personal data for lawful purposes with notice and consent where required, and for legitimate uses permitted by applicable law. For U.S. state privacy laws, including California where applicable, this policy describes categories of data, purposes, sharing, retention, rights, and contact methods.
       </p>
     </section>
 
     <section id="local-cloud">
-      <h2>6. Local device storage, cloud storage, and encryption</h2>
+      <h2>6. Local storage, cloud storage, and encryption</h2>
       <h3>Local device storage</h3>
       <p>
-        Note Mate stores much of your active app data locally in the Android app sandbox, including notes, memories, sticky notes, media references, PDFs, app settings, reminder state, and cached data. Local device storage allows the app to remain fast and useful offline. Android's app sandbox helps isolate this data from other apps, but local device data may be accessible to someone who has access to your unlocked device, device backups outside Note Mate, rooted devices, compromised devices, debugging tools, or malware.
+        Much of Note Mate's active data is stored locally in the Android app sandbox, including notes, sticky notes, memories, PDF references, settings, reminder state, and cached information. Android's app sandbox helps isolate this data from other apps, but data on your device may still be exposed if your device is unlocked, rooted, compromised, backed up outside Note Mate, accessed through debugging tools, or infected with malware.
       </p>
-
-      <h3>Cloud and backup storage</h3>
+      <h3>Cloud storage and online processing</h3>
       <p>
-        If you enable cloud backup, restore, collaboration, AI, messaging, or sign-in features, selected data may be sent to cloud services. Cloud backup and restore data is intended to be encrypted before upload in the encrypted backup flow. Some operational metadata may remain visible to service providers so the feature can work, such as file names, file IDs, timestamps, account IDs, collaborator IDs, app version, backup status, and sync metadata.
+        Cloud features may use Firebase, Google Drive, Google Play services, AI providers, and other service providers. Data may be uploaded or processed when you sign in, enable backup, restore from Drive, collaborate, receive push notifications, use Mate AI, use ads, or rely on remote configuration.
       </p>
-
-      <div class="callout warning">
-        <p><strong>PIN/password warning:</strong> if a backup is protected by a PIN or password and you lose it, the encrypted backup content may be unrecoverable. This is intentional security behavior. You are responsible for remembering your backup PIN or password.</p>
-      </div>
-
-      <h3>Encryption limits</h3>
+      <h3>Encryption and passwords</h3>
       <p>
-        Encryption protects data in many risk scenarios, but it is not magic. Data can still be exposed if your device is compromised, if you choose a weak PIN or password, if you share exported files, if a collaborator receives a decrypted copy, if you send content to an AI provider, if you paste content into another app, or if a third-party service processes metadata necessary to deliver the feature.
+        Note Mate may use Android Keystore-backed protection, encrypted backup flows, protected `.links` exports, HTTPS, Firebase Authentication, App Check or Play Integrity, and access rules. Encryption availability can vary by feature. If you protect an export or backup with a PIN/password, losing that PIN/password may make encrypted content unrecoverable.
       </p>
     </section>
 
     <section id="ai">
       <h2>7. Mate AI assistant</h2>
       <p>
-        Mate AI is an optional assistant designed to help with note-related tasks such as summarizing, correcting grammar, continuing writing, rewriting in a different style, generating study material, creating tags, improving structure, and answering questions about the current note. AI features may use backend functions and third-party AI providers such as Groq or OpenRouter, depending on configuration, availability, rate limits, and user-selected model options.
+        Mate AI is optional. It can help summarize, rewrite, continue, correct, tag, explain, structure, and study from note content. AI features may use backend functions and third-party AI providers such as Groq or OpenRouter depending on availability, configuration, user settings, rate limits, and selected models.
       </p>
       <p>
-        When you use Mate AI, the text you submit, your command, selected note context, selected model, and related technical metadata may be sent to backend infrastructure and AI providers to generate a response. Do not send sensitive information to AI unless you are comfortable with it being processed by those providers. AI responses may be inaccurate, incomplete, or inappropriate; you should review AI output before relying on it or saving it.
+        When you use Mate AI, the prompt, selected command, selected model, note text or context you provide, generated output, and technical metadata may be sent to backend services and AI providers. You should not submit highly sensitive information to AI unless you are comfortable with that processing. AI output may be inaccurate, incomplete, offensive, or unsuitable; review output before relying on it.
       </p>
-      <p>
-        Note Mate should not automatically apply AI edits without your choice where preview/accept workflows are available. AI content may be temporarily processed for the request and may be subject to provider security, retention, abuse monitoring, or logging practices. We do not use Mate AI to intentionally create long-term personal memory about you outside the app's explicit saved content.
-      </p>
+      <div class="callout warning">
+        <p><strong>AI choice:</strong> Note Mate is designed so AI actions happen when you initiate them. Avoid using AI on content you would not want processed by a third-party AI service.</p>
+      </div>
     </section>
 
     <section id="backup">
       <h2>8. Backup, restore, and Google Drive</h2>
       <p>
-        Note Mate may offer backup to Google Drive or other configured cloud storage. If you connect Google Drive, Google may process your account identity, authorization tokens, Drive file metadata, and backup files under Google's applicable terms and privacy policies. Note Mate uses Drive access to create, update, list, download, and restore app backup files needed for your backup workflow.
+        If you connect Google Drive, Google may process your account identity, authorization tokens, Drive metadata, file IDs, and backup files under Google's terms and privacy policy. Note Mate uses Drive access for app backup and restore workflows, such as creating, listing, updating, downloading, and deleting backup files.
       </p>
       <p>
-        Backup can include notes, rich text state, media attachments, memories, PDFs, collections, reminders, tags, metadata, and app-specific export data. Restore may overwrite, merge, or import data depending on the feature flow. If restore fails because of a wrong PIN/password, missing files, revoked Drive permission, network interruption, or corrupted backup, Note Mate may be unable to recover the affected encrypted content.
-      </p>
-      <p>
-        You can revoke Google Drive or Google account access through your Google account settings. Revoking access may disable future backup or restore until you reconnect. Deleting local app data does not necessarily delete backup files already stored in Drive; you may need to delete them from Drive or use in-app deletion features where provided.
+        Backups may include notes, tasks, folders, tags, memories, rich text state, media attachments, PDFs, settings, reminders, and metadata. Restore may import, merge, or overwrite data depending on the feature flow. Revoking Drive access may stop future backup or restore until you reconnect. Deleting local app data does not necessarily delete backups already stored in Drive.
       </p>
     </section>
 
     <section id="collaboration">
       <h2>9. Collaboration and shared notes</h2>
       <p>
-        Collaboration is optional. When you share a note with another registered user, Note Mate may process the owner's user ID, collaborator user IDs, collaborator email addresses, role assignments, note IDs, update timestamps, updated-by fields, and content or encrypted content depending on the collaboration implementation. The owner controls adding and removing collaborators and changing roles where the app supports it.
+        Collaboration is optional. When you share a note, Note Mate may process owner IDs, collaborator IDs, collaborator emails, note IDs, roles, invitations, timestamps, version or patch data, updated-by fields, conflict metadata, and shared content where applicable. Access controls are enforced through authentication and server-side rules.
       </p>
       <p>
-        Collaborators may be able to view or edit shared note content according to their role. If a collaborator can view decrypted content, that collaborator may copy, screenshot, export, or share it outside Note Mate. Note Mate cannot guarantee confidentiality after content is intentionally shared with another person.
-      </p>
-      <p>
-        Collaboration security is enforced through server-side rules and authentication, but no system is perfect. If you believe a note was shared incorrectly, remove the collaborator, change relevant account credentials, and contact support.
+        Collaborators may view, edit, copy, export, screenshot, or further share content according to their role and what they can access. Once you intentionally share content with another person, Note Mate cannot guarantee what that person does with it outside the app.
       </p>
     </section>
 
     <section id="permissions">
-      <h2>10. Android permissions and why Note Mate requests them</h2>
+      <h2>10. Android permissions and sensitive access</h2>
       <table>
         <thead>
           <tr>
@@ -553,194 +629,200 @@
         <tbody>
           <tr>
             <td>Internet and network state</td>
-            <td>Firebase, sign-in, backup, restore, AI, ads, remote config, cloud functions, collaboration, and diagnostics.</td>
-            <td>Required for online features; you can use some local features offline.</td>
+            <td>Sign-in, Firebase, backup, restore, AI, ads, collaboration, remote config, notifications, diagnostics, and cloud functions.</td>
+            <td>Online features need network access. Some local features may work offline.</td>
           </tr>
           <tr>
-            <td>Notifications, vibration, exact alarms, and boot completed</td>
-            <td>Reminders, task alarms, meeting alarms, memory resurfacing, study sessions, and restoring scheduled reminders after reboot.</td>
-            <td>Manage in Android notification and alarm settings.</td>
+            <td>Notifications, vibration, alarms, and boot completed</td>
+            <td>Task reminders, meeting alarms, daily recall, memory resurfacing, study sessions, and restoring scheduled reminders after reboot.</td>
+            <td>Manage through Android notification, alarm, and app settings.</td>
           </tr>
           <tr>
-            <td>Microphone and audio media</td>
-            <td>Voice notes, audio attachments, audio signs, and audio-related memory features.</td>
+            <td>Microphone and audio files</td>
+            <td>Voice notes, audio signs, audio attachments, recording workflows, and related memory features.</td>
             <td>Grant, deny, or revoke in Android permissions.</td>
           </tr>
           <tr>
-            <td>Photos, videos, images, and external storage</td>
-            <td>Importing media, attaching images, opening PDFs, saving exports, screenshot-related workflows, and backing up media attachments.</td>
-            <td>Grant selected media or revoke access in Android settings where supported.</td>
+            <td>Photos, videos, media, and file access</td>
+            <td>Attaching images, opening PDFs, importing files, saving exports, screenshot workflows, and backing up selected media.</td>
+            <td>Grant selected media or revoke access depending on your Android version.</td>
           </tr>
           <tr>
-            <td>Location, including background location where enabled</td>
-            <td>Location-based reminders and reminders that should work after you leave the app.</td>
-            <td>Use only while using the app, allow all the time, approximate, precise, or deny through Android settings, depending on your Android version.</td>
+            <td>Location</td>
+            <td>Location-based reminders and features that need a place trigger.</td>
+            <td>Choose approximate, precise, while-in-use, all-the-time where available, or deny in Android settings.</td>
           </tr>
           <tr>
-            <td>Calendar read/write</td>
-            <td>Meeting notes, calendar-based reminders, and optional event integration.</td>
-            <td>Grant or revoke through Android settings. Calendar providers may have their own privacy terms.</td>
+            <td>Calendar</td>
+            <td>Meeting notes, calendar-based reminders, and event integration.</td>
+            <td>Grant or revoke through Android settings. Calendar providers have their own policies.</td>
           </tr>
           <tr>
             <td>Biometric authentication</td>
-            <td>Unlocking locked folders or protected app areas using Android biometric prompts.</td>
-            <td>Biometric templates are handled by Android; Note Mate does not receive your fingerprint or face data.</td>
+            <td>Unlocking protected app areas using Android biometric prompts.</td>
+            <td>Android handles biometric templates. Note Mate does not receive your fingerprint or face data.</td>
           </tr>
           <tr>
-            <td>System overlay</td>
-            <td>Optional screenshot or quick capture popup features that appear over other apps.</td>
-            <td>Grant or revoke from Android special app access settings.</td>
-          </tr>
-          <tr>
-            <td>Ignore battery optimizations / foreground service</td>
-            <td>Improving reliability for screenshot monitoring, backup, sync, reminders, or long-running app tasks.</td>
-            <td>Optional depending on feature; controlled in Android battery settings.</td>
+            <td>System overlay and foreground services</td>
+            <td>Optional screenshot monitor, quick capture overlays, long-running capture workflows, backup, sync, or reminder reliability.</td>
+            <td>Controlled through Android special access, battery, and app settings.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <section id="sharing">
-      <h2>11. Imports, exports, sharing, and `.links` files</h2>
+      <h2>11. Sharing, imports, exports, and `.links` files</h2>
       <p>
-        Note Mate can import or export notes and files, including PDF, TXT, DOCX, images, audio, and Note Mate `.links` files. When you export or share a file, the receiving app, operating system share sheet, messaging app, cloud service, or recipient may process that file under their own rules. For example, if you share a `.links` file through WhatsApp, WhatsApp and the recipient may receive the file and related metadata.
+        Note Mate may import and export PDFs, TXT, DOCX, images, audio, and Note Mate `.links` files. When you share or export files, the receiving app, share sheet, cloud service, or recipient may process the file under their own policies. Deleting content from Note Mate may not delete exported files, Drive backups, collaborator copies, screenshots, or files saved outside the app sandbox.
       </p>
       <p>
-        `.links` files are intended as portable Note Mate files and may include encrypted or packaged note data depending on export settings. If you protect an exported file with a PIN/password, recipients may need that PIN/password to import it. If you export unencrypted or decrypted content, anyone with access to that file may read it.
-      </p>
-      <p>
-        Deleting a note from Note Mate may not delete copies you exported, shared, backed up to third-party services, sent to collaborators, or saved outside the app sandbox. You are responsible for managing files after they leave Note Mate.
+        `.links` files may contain packaged Note Mate data and may be protected with a PIN/password depending on export settings. If an exported file is unencrypted or decrypted, anyone with access to that file may read it.
       </p>
     </section>
 
     <section id="third-parties">
       <h2>12. Service providers and third parties</h2>
-      <p>
-        Note Mate may use service providers to operate the app. The exact providers may change as the app evolves. Providers may include:
-      </p>
+      <p>Note Mate may use service providers, SDKs, and platform services, including:</p>
       <ul>
-        <li>Google Firebase for authentication, Firestore, Cloud Functions, Remote Config, App Check, Analytics, Firebase Cloud Messaging, and related infrastructure.</li>
-        <li>Google Play services for app integrity, location services, authentication, ads, and device services.</li>
+        <li>Google Firebase for Authentication, Firestore, Cloud Functions, Firebase Cloud Messaging, Remote Config, App Check, Analytics, and related infrastructure.</li>
+        <li>Google Play services for authentication, app integrity, location services, advertising, and device services.</li>
         <li>Google Drive APIs for user-authorized backup and restore.</li>
         <li>Google AdMob for advertising where enabled.</li>
-        <li>AI providers such as Groq and OpenRouter for Mate AI requests.</li>
-        <li>Google ML Kit and device ML services for OCR, image labeling, digital ink, and related local or service-assisted features depending on SDK behavior.</li>
-        <li>Crash, diagnostics, security, hosting, and email support tools used to operate and troubleshoot the app.</li>
+        <li>AI providers such as Groq or OpenRouter for Mate AI requests, depending on app configuration.</li>
+        <li>Google ML Kit and related ML services for OCR, image labeling, digital ink, and similar features depending on SDK behavior.</li>
+        <li>Email, hosting, diagnostics, security, and support tools used to operate and troubleshoot the app.</li>
       </ul>
       <p>
-        We may also disclose information if required by law, to protect users or the public, to investigate abuse, to enforce rights, during a business transfer, or with your direction, such as when you share files with another app.
+        We may disclose information with service providers, with collaborators you choose, with apps or recipients you direct, in response to valid legal requests, to protect rights and safety, to investigate abuse, or during a merger, acquisition, restructuring, or transfer of app operations.
       </p>
       <div class="callout">
-        <p><strong>No sale of note content:</strong> we do not sell your private note content. If applicable law defines certain advertising or analytics disclosures as "sale" or "sharing," you may have opt-out rights as described below.</p>
+        <p><strong>No sale of private note content:</strong> Note Mate does not sell your private note content. If advertising or analytics disclosures are considered a "sale" or "sharing" under applicable law, you may have opt-out rights through device settings, consent controls, or by contacting us.</p>
       </div>
     </section>
 
     <section id="ads-analytics">
       <h2>13. Ads, analytics, diagnostics, and remote configuration</h2>
       <p>
-        Note Mate may use Firebase Analytics and Google AdMob. Analytics helps understand feature usage, diagnose problems, and improve the app. Advertising may support free app features. Depending on your region, device settings, and consent choices, ads may be personalized or non-personalized. Advertising SDKs may process identifiers, approximate location derived from network information, app interactions, ad impressions, clicks, and device information.
+        Note Mate may use Firebase Analytics, diagnostics, remote configuration, campaign tiles, and Google AdMob. These services may process app events, device/app information, ad impressions, ad clicks, consent status, crash logs, performance information, feature flags, and related identifiers.
       </p>
       <p>
-        Remote configuration may be used to enable, disable, or tune app features after release, including AI model availability, backup safeguards, kill switches, celebration or announcement tiles, rate limits, and minimum supported app versions. Remote configuration helps respond to security incidents, bugs, provider outages, and performance issues without requiring an immediate app update.
+        Analytics and diagnostics help improve reliability, accessibility, feature design, and performance. Ads may support free features. Remote configuration may enable, disable, or tune features such as model availability, rate limits, backup safeguards, notification campaigns, security checks, and minimum supported app versions.
       </p>
     </section>
 
     <section id="security">
       <h2>14. Security measures</h2>
       <p>
-        We use technical and organizational safeguards appropriate to the nature of the app, including Android app sandboxing, HTTPS-only network configuration, Firebase Authentication, Firebase security rules, App Check or Play Integrity where configured, release build shrinking and obfuscation, encrypted backup flows where supported, Android Keystore-backed local encryption for selected sensitive values, permission prompts, access controls, and abuse prevention.
+        We use safeguards appropriate to the app, including Android sandboxing, HTTPS, Firebase Authentication, server-side rules, App Check or Play Integrity where configured, release build shrinking and obfuscation, Android Keystore-backed protection for selected sensitive values, encrypted backup or export flows where supported, permission prompts, access controls, and abuse prevention.
       </p>
       <p>
-        The app may detect rooted devices, emulators, debugging, app tampering, outdated app versions, or integrity failures. Where enabled, the app may degrade sensitive features such as AI, backup, restore, or collaboration rather than crashing. These checks are designed to reduce abuse and protect user data, but they cannot guarantee complete protection.
-      </p>
-      <p>
-        No transmission, app, storage system, or encryption scheme is perfectly secure. You can improve your own security by using a strong device lock, keeping Android and Note Mate updated, using a strong backup PIN/password, avoiding rooted or compromised devices, reviewing collaborators, limiting AI submissions to content you are comfortable sending, and deleting exported files you no longer need.
+        The app may detect rooted devices, emulators, debugging, tampering, outdated versions, or integrity failures and may restrict sensitive cloud features. No app, network, device, provider, or encryption method is perfectly secure. You can improve your own security by keeping Android and Note Mate updated, using a strong device lock, avoiding rooted devices, protecting backup passwords, reviewing collaborators, limiting AI submissions, and deleting exported files you no longer need.
       </p>
     </section>
 
     <section id="retention">
       <h2>15. Retention and deletion</h2>
       <p>
-        We keep personal information only for as long as reasonably necessary for the purposes described in this policy, unless a longer retention period is required or permitted by law. Retention periods vary depending on the type of data and feature.
+        We keep information only as long as reasonably necessary for the purposes described in this policy, unless a longer period is required or permitted by law, security needs, fraud prevention, backups, or technical constraints.
       </p>
-      <ul>
-        <li>Local notes, memories, widgets, attachments, and settings remain on your device until you delete them, clear app data, uninstall the app, or an app feature removes them.</li>
-        <li>Recycle bin items may remain until permanently deleted or until an automatic cleanup rule applies.</li>
-        <li>Cloud backup files remain in your connected cloud account until deleted through Note Mate, the cloud provider, or your account tools.</li>
-        <li>Firebase account, collaboration, messaging, analytics, and diagnostic records may remain for operational, security, fraud-prevention, legal, or backup reasons.</li>
-        <li>AI request logs or provider-side processing records may be retained by providers according to their policies and our configuration.</li>
-        <li>Support communications may be retained while needed to resolve your request and maintain records.</li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Data type</th>
+            <th>Typical retention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Local notes, memories, attachments, widgets, and settings</td>
+            <td>Remain on your device until you delete them, clear app data, uninstall, or an app feature removes them.</td>
+          </tr>
+          <tr>
+            <td>Recycle bin content</td>
+            <td>May remain until permanently deleted or until an automatic cleanup rule applies.</td>
+          </tr>
+          <tr>
+            <td>Cloud backups</td>
+            <td>Remain in your connected cloud account until deleted through Note Mate, the provider, or account tools.</td>
+          </tr>
+          <tr>
+            <td>Account, collaboration, messaging, security, and diagnostic records</td>
+            <td>Retained as needed for account operation, collaboration, fraud prevention, legal compliance, reliability, and troubleshooting.</td>
+          </tr>
+          <tr>
+            <td>AI request records</td>
+            <td>May be temporarily processed by backend services and AI providers according to configuration and provider policies.</td>
+          </tr>
+          <tr>
+            <td>Support communications</td>
+            <td>Retained while needed to answer your request, maintain records, and resolve disputes or security issues.</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
-        If you request account deletion, we will take reasonable steps to delete or de-identify personal information associated with your account, subject to legal, security, backup, fraud-prevention, and technical limitations. Deletion from active systems may not immediately remove data from encrypted backups, logs, collaborator copies, exported files, or third-party services you control.
+        Account deletion requests are handled by taking reasonable steps to delete or de-identify personal information associated with the account, subject to legal, security, fraud-prevention, backup, collaborator, exported-file, and technical limitations. Deleted information may persist for a limited time in backups, logs, recipient copies, or third-party systems outside our control.
       </p>
     </section>
 
     <section id="rights">
-      <h2>16. Your privacy rights</h2>
+      <h2>16. Your choices and privacy rights</h2>
       <p>
-        Depending on your location and applicable law, you may have rights to access, correct, delete, restrict, object to, export, or receive a copy of your personal information; withdraw consent; opt out of certain advertising or sharing; limit the use of sensitive personal information; complain to a regulator; or nominate/authorize someone to act on your behalf where the law allows.
+        Depending on your location, you may have rights to access, know, correct, delete, restrict, object to, export, or receive a copy of personal information; withdraw consent; opt out of certain advertising or sharing; limit certain sensitive data uses; complain to a regulator; or authorize another person to act for you.
       </p>
-
-      <h3>United States and California</h3>
+      <h3>Controls inside or around Note Mate</h3>
+      <ul>
+        <li>Create, edit, export, delete, and permanently delete many notes directly in the app.</li>
+        <li>Grant, deny, or revoke Android permissions in device settings.</li>
+        <li>Avoid or disable optional features such as AI, cloud backup, screenshot monitoring, location reminders, calendar integration, widgets, collaboration, or personalized ads where controls are available.</li>
+        <li>Remove collaborators or stop sharing notes where you control the shared note.</li>
+        <li>Delete exported files, Drive backups, shared copies, and cloud files in the locations where you saved them.</li>
+        <li>Sign out, request account deletion, or contact support for rights requests.</li>
+      </ul>
+      <h3>California and other U.S. state privacy laws</h3>
       <p>
-        Residents of California and other U.S. states may have rights to know what categories of personal information are collected, used, disclosed, sold, or shared; access specific information; delete information; correct inaccurate information; opt out of sale or sharing; limit use of sensitive personal information where applicable; and not be discriminated against for exercising rights. Note Mate does not sell your private note content. If advertising or analytics disclosures are considered sale or sharing under applicable law, you may use device settings, consent prompts, or contact us to exercise applicable opt-out rights.
+        Where applicable, residents may request information about categories and specific pieces of personal information collected, categories of sources, purposes, categories of third parties, disclosure or sharing, correction, deletion, opt-out of sale or sharing, limitation of certain sensitive personal information uses, and non-discrimination for exercising rights.
       </p>
-
       <h3>European Economic Area, United Kingdom, and Switzerland</h3>
       <p>
-        You may have rights of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. You may also have the right to lodge a complaint with your local data protection authority. Where we rely on legitimate interests, you may object to processing as permitted by law.
+        Where applicable, you may have rights of access, rectification, erasure, restriction, portability, objection, withdrawal of consent, and complaint to a supervisory authority.
       </p>
-
       <h3>India</h3>
       <p>
-        Where India's Digital Personal Data Protection framework applies, you may have rights to obtain information about processing, request correction or erasure, withdraw consent where processing is based on consent, nominate another person where applicable, and seek grievance redressal. You also have duties to provide authentic information and not misuse rights requests.
+        Where applicable, you may have rights to information about processing, correction, completion, updating, erasure, withdrawal of consent, grievance redressal, and nomination where permitted by law.
       </p>
-
       <h3>How to exercise rights</h3>
       <p>
-        To exercise privacy rights, contact us at <a href="mailto:shreyaslinks00008@gmail.com">shreyaslinks00008@gmail.com</a>. We may need to verify your identity and account ownership before completing a request. Some requests may be limited by law, security, technical feasibility, backup limitations, rights of other users, or the need to preserve evidence of fraud or abuse.
+        Contact <a href="mailto:shreyaslinks00008@gmail.com">shreyaslinks00008@gmail.com</a>. We may need to verify your identity and account ownership. Some requests may be limited by law, technical feasibility, security needs, backup limitations, fraud prevention, records we must keep, or rights of other users.
       </p>
     </section>
 
     <section id="children">
       <h2>17. Children and students</h2>
       <p>
-        Note Mate is a general productivity app and is not directed to children under 13, or to children under the age required by local law for consent to online services. We do not knowingly collect personal information from children without appropriate consent. If you believe a child has provided personal information without required consent, contact us and we will take appropriate steps.
+        Note Mate is a general productivity app and is not directed to children under 13 or under the age required by local law for consent to online services. We do not knowingly collect personal information from children without appropriate consent. If you believe a child has provided personal information without required consent, contact us and we will take reasonable steps.
       </p>
       <p>
-        Students may use Note Mate for study, but users should avoid storing information they are not authorized to store, including another person's private, school, medical, or confidential records. Schools, parents, or guardians may need separate agreements or controls before deploying the app in an educational environment.
+        Students may use Note Mate for study, but users should avoid storing information they are not authorized to store, including another person's private, school, medical, financial, or confidential records.
       </p>
     </section>
 
     <section id="international">
       <h2>18. International transfers</h2>
       <p>
-        Note Mate and its service providers may process information in countries other than where you live. These countries may have data protection laws different from your country. Where required, we rely on appropriate safeguards such as contractual protections, provider compliance programs, or other mechanisms permitted by applicable law.
+        Note Mate and its providers may process information in countries other than where you live. These countries may have different data protection laws. Where required, we rely on appropriate safeguards such as contractual protections, provider compliance programs, or other mechanisms permitted by law.
       </p>
     </section>
 
-    <section id="choices">
-      <h2>19. Your choices and controls</h2>
-      <ul>
-        <li>You can create, edit, export, or delete many notes directly in the app.</li>
-        <li>You can revoke Android permissions in your device settings.</li>
-        <li>You can disable or avoid optional features such as AI, screenshot monitor, cloud backup, location reminders, calendar integrations, widgets, or personalized ads where controls are available.</li>
-        <li>You can remove collaborators or stop sharing notes where you are the owner.</li>
-        <li>You can delete exported files, Drive backups, and shared copies from the locations where you saved them.</li>
-        <li>You can sign out, request account deletion, or contact support for help with privacy requests.</li>
-      </ul>
-    </section>
-
     <section id="changes">
-      <h2>20. Changes to this policy</h2>
+      <h2>19. Changes to this policy</h2>
       <p>
-        We may update this Privacy Policy when the app changes, laws change, providers change, or security practices improve. If changes are material, we may notify you in the app, through an update tile, by email, or through another reasonable method. The "Effective date" above shows when this policy version became effective.
+        We may update this policy when Note Mate changes, providers change, laws change, security practices improve, or app store requirements change. If changes are material, we may notify you in the app, by email, through a campaign tile, or through another reasonable method. The effective date shows when this version applies.
       </p>
     </section>
 
     <section id="contact">
-      <h2>21. Contact and grievance redressal</h2>
+      <h2>20. Contact and grievance redressal</h2>
       <p>
         For privacy questions, rights requests, account deletion, security concerns, or grievance redressal, contact:
       </p>
@@ -749,7 +831,7 @@
         Email: <a href="mailto:shreyaslinks00008@gmail.com">shreyaslinks00008@gmail.com</a>
       </p>
       <p class="small">
-        Please include enough information for us to understand your request, such as your account email, the feature involved, the region where you are located, and the action you want us to take. Do not include your backup PIN/password in support emails.
+        Please include enough information to understand your request, such as your account email, the feature involved, your region, and what action you want. Do not send backup PINs, passwords, private notes, or sensitive files unless we specifically ask for a secure troubleshooting purpose.
       </p>
     </section>
   </main>
@@ -757,7 +839,7 @@
   <footer>
     <div class="shell">
       <p><strong>Note Mate Privacy Policy</strong></p>
-      <p class="small">Effective May 3, 2026. This page is intended for publication with the Note Mate Android app and should be reviewed before release whenever app features, providers, or legal requirements change.</p>
+      <p class="small">Effective May 3, 2026. This page is intended for publication with the Note Mate Android app and should be reviewed before release whenever features, SDKs, providers, app store disclosures, or legal requirements change.</p>
     </div>
   </footer>
 </body>
