@@ -1,1 +1,0 @@
-# note_mate_privacy
